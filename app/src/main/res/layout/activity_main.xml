@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="@color/colorPrimary">
+
+
+    <!-- RadioGroup สำหรับเลือกประเภทของรูปทรง -->
+    <RadioGroup
+        android:id="@+id/shapeRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/triangleRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="สามเหลี่ยม" />
+
+        <RadioButton
+            android:id="@+id/circleRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="วงกลม" />
+
+        <RadioButton
+            android:id="@+id/rectangleRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="สี่เหลี่ยม" />
+    </RadioGroup>
+
+    <!-- รูปทรงที่เลือก -->
+    <ImageView
+        android:id="@+id/shapeImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="รูปทรง"
+        android:visibility="gone"/>
+
+    <!-- สูตรคำนวณ -->
+    <TextView
+        android:id="@+id/formulaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="สูตรคำนวณ"
+        android:visibility="gone" />
+
+    <!-- ช่องสำหรับกรอกตัวเลขที่หนึ่ง -->
+    <EditText
+        android:id="@+id/firstInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="กรอกเลขแรก"
+        android:inputType="numberDecimal" />
+
+    <!-- ช่องสำหรับกรอกตัวเลขที่สอง -->
+    <EditText
+        android:id="@+id/secondInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="กรอกเลขที่สอง (ถ้ามี)"
+        android:inputType="numberDecimal"
+        android:visibility="gone" />
+
+    <!-- ปุ่มคำนวณ -->
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="คำนวณ"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
+
+
+
+
